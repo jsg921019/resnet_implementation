@@ -1,0 +1,87 @@
+dataset:
+  root: '~/data'
+
+
+dataloader:
+  batch_size: 128
+  num_workers: 2
+
+
+trainer:
+  seed: 42
+  log_dir: 'logs'
+  weight_dir: 'weights'
+
+
+criterion:
+  name: 'CrossEntropyLoss'
+
+
+optimizer:
+  name: 'SGD'
+  params:
+    lr: 0.1
+    weight_decay: 0.0001
+    momentum: 0.9
+
+
+scheduler:
+  name: 'MultiConstantLR'
+  params:
+    milestones:
+      32000: 0.01
+      48000: 0.001
+
+
+plain:
+  bottleneck_ratio: null
+  first_in_channels: 16
+  num_classes: 10
+
+
+resnet:
+  bottleneck_ratio: 1
+  first_in_channels: 16
+  num_classes: 10
+
+
+n_epochs: 164
+
+
+experiments:
+
+  plain-20:
+    model: 'plain'
+    n: 3
+
+  plain-32:
+    model: 'plain'
+    n: 5
+
+  plain-44:
+    model: 'plain'
+    n: 7
+
+  plain-56:
+    model: 'plain'
+    n: 9
+    
+  resnet-20:
+    model: 'resnet'
+    n: 3
+
+  resnet-32:
+    model: 'resnet'
+    n: 5
+
+  resnet-44:
+    model: 'resnet'
+    n: 7
+
+  resnet-56:
+    model: 'resnet'
+    n: 9
+    
+  resnet-1202:
+    model: 'resnet'
+    n: 200
