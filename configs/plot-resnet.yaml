@@ -1,0 +1,30 @@
+log_path: 'logs'
+
+figsize: [10, 5]
+
+guides: [5, 10, 20]
+
+models:
+
+  resnet-20:
+    color: 'goldenrod'
+    text:
+      s: '20-layer'
+      loc: 'top'
+    
+  resnet-32:
+    color: 'cyan'
+
+  resnet-44:
+    color: 'lime'
+
+  resnet-56:
+    color: 'red'
+      
+  resnet-110:
+    color: 'black'
+    text:
+      s: '110-layer'
+      loc: 'bottom'
+      
+save_name: 'resnet.png'

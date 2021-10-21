@@ -1,0 +1,27 @@
+log_path: 'logs'
+
+figsize: [10, 5]
+
+guides: [5, 10, 20]
+
+models:
+
+  plain-20:
+    color: 'goldenrod'
+    text:
+      s: '20-layer'
+      loc: 'bottom'
+    
+  plain-32:
+    color: 'cyan'
+
+  plain-44:
+    color: 'lime'
+
+  plain-56:
+    color: 'red'
+    text:
+      s: '56-layer'
+      loc: 'top'
+      
+save_name: 'plain.png'
